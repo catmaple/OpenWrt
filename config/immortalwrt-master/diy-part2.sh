@@ -28,7 +28,7 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
 git clone https://github.com/fw876/hellowworld.git package/helloworld
-git clone https://github.com/kenzok8/openwrt-packages.git /package/kenzo
+git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
