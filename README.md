@@ -25,15 +25,15 @@
 3，设置config
 - 进入config文件夹，需要用哪个分支的源码，用下面的方法生成config进行替换。
 
-a.在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
+---a.在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
 
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex quilt uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
 
-b.然后克隆源码到Ubuntu客户机，如：
+---b.然后克隆源码到Ubuntu客户机，如：
 
 git clone https://github.com/coolsnowwolf/lede openwrt
 
-c.再添加源(openwrt-passwall 这个必需配置，不然提示一些包不存在)
+---c.再添加源(openwrt-passwall 这个必需配置，不然提示一些包不存在)
 
 cd openwrt/
 
@@ -49,13 +49,13 @@ kenzok8 的源里集成了很多常用的软件
 
 ./scripts/feeds install -a
 
-d.生成config内容
+---d.生成config内容
 
 make menuconfig
 
 选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。
 
-e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
+---e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
 
 4，添加插件或主题
 
@@ -66,9 +66,10 @@ e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > co
     echo 'src-git amlogic https://github.com/ophub/luci-app-amlogic' >>feeds.conf.default
     
    
-5，开始编译，
+5，开始编译
  
  - 点击菜单栏的【Actions】，左边菜单栏选择编译流程（说明：通用编译适合路由器等常用设备，如果你是电视盒子，那么请选择电视盒子编译），再选择右边的Run workflow开始编译。大约1小时左右可以完成编译。
+ - 默认IP地址：192.168.100.1(root, password)
  
  
  6，下载固件
