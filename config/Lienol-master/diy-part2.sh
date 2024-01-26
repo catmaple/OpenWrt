@@ -32,7 +32,7 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 # Add third-party software packages (The entire repository)
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
-git clone https://github.com/fw876/hellowworld.git package/helloworld
+git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
 # Add third-party software packages (Specify the package)
