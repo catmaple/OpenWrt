@@ -23,17 +23,17 @@
 - 打开仓库 https://github.com/xinlingduyu/build-openwrt ，点击右上的 Fork 按钮，复制一份仓库代码到自己的账户下，稍等几秒钟，提示 Fork 完成后，到自己的账户下访问自己仓库里的 build-openwrt 。在右上角的 Settings > Secrets > Actions > New repostiory secret ( Name: GH_TOKEN, Value: 填写刚才GITHUB_TOKEN的值 )，保存。并在左侧导航栏的 Actions > General > Workflow permissions 下选择 Read and write permissions 并保存。图
 
 3，设置config
-- 进入config文件夹，需要用哪个分支的源码，就打开哪个文件夹。
+- 进入config文件夹，需要用哪个分支的源码，用下面的方法生成config进行替换。
 
-关于config文件，可在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
+a.在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
 
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex quilt uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
 
-然后克隆源码到Ubuntu客户机，如：
+b.然后克隆源码到Ubuntu客户机，如：
 
 git clone https://github.com/coolsnowwolf/lede openwrt
 
-再添加源
+c.再添加源(openwrt-passwall 这个必需配置，不然提示一些包不存在)
 
 cd openwrt/
 
@@ -43,19 +43,19 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
-
 kenzok8 的源里集成了很多常用的软件
-openwrt-passwall 这个必需配置，不然提示一些包不存在
 
 ./scripts/feeds update -a
 
 ./scripts/feeds install -a
 
-生成config内容
+d.生成config内容
 
 make menuconfig
 
-选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
+选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。
+
+e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
 
 4，添加插件或主题
 
