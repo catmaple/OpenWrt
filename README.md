@@ -12,7 +12,7 @@
 
 可为路由器和电视盒子编译Openwrt固件
 
-## 使用方法
+##### 为路由器编译OpenWRT固件 ####
 
 1，登录GitHub账号
 
@@ -56,24 +56,32 @@ make menuconfig
 选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。
 
 ---e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
+ 
+   
+4，开始编译
+ 
+ - 点击菜单栏的【Actions】，左边菜单栏选择编译流程：路由器固件编译，再点击右边的Run workflow开始编译。大约1小时左右可以完成编译。
 
-4，添加插件或主题
+
+ 6，下载固件
+ 
+   编译完成后点击 Code, 再点击页面右下角Release进入下载页面。
+   默认IP地址：192.168.100.1(root, password)
+
+ ##### 为电视盒子编译OpenWRT固件 ####
+ 
+  1，添加插件或主题
 
 -  进入config文件夹，需要用哪个分支的源码，就打开哪个文件夹。打开diy-part2.sh文件，电视盒子必须安装amlogic插件，格式如下：
 
     #####Add a feed source
     
     echo 'src-git amlogic https://github.com/ophub/luci-app-amlogic' >>feeds.conf.default
-    
-   
-5，开始编译
+
+  2. 开始编译
  
- - 点击菜单栏的【Actions】，左边菜单栏选择编译流程（说明：通用编译适合路由器等常用设备，如果你是电视盒子，那么请选择电视盒子编译），再选择右边的Run workflow开始编译。大约1小时左右可以完成编译。
- 
- 
- 6，下载固件
+ - 点击菜单栏的【Actions】，左边菜单栏选择编译流程：电视盒子固件编译，根据电视盒子类型选择相应的主板，内核等选项， 再点击右边的Run workflow开始编译。
+
+ 3.  下载固件
  
    编译完成后点击 Code, 再点击页面右下角Release进入下载页面。
-   默认IP地址：192.168.100.1(root, password)
-
-  
