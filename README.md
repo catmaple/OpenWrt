@@ -26,24 +26,33 @@
 - 进入config文件夹，需要用哪个分支的源码，就打开哪个文件夹。
 
 关于config文件，可在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
+
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex quilt uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
 
 然后克隆源码到Ubuntu客户机，如：
+
 git clone https://github.com/coolsnowwolf/lede openwrt
 
 再添加源
+
 cd openwrt/
+
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+
 
 kenzok8 的源里集成了很多常用的软件
 openwrt-passwall 这个必需配置，不然提示一些包不存在
 
 ./scripts/feeds update -a
+
 ./scripts/feeds install -a
 
 生成config内容
+
 make menuconfig
 
 选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
