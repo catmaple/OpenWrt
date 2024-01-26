@@ -63,7 +63,7 @@ make menuconfig
  - 点击菜单栏的【Actions】，左边菜单栏选择编译流程：路由器固件编译，再点击右边的Run workflow开始编译。大约1小时左右可以完成编译。
 
 
- 6，下载固件
+ 5，下载固件
  
    编译完成后点击 Code, 再点击页面右下角Release进入下载页面。
    默认IP地址：192.168.100.1(root, password)
