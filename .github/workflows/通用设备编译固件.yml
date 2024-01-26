@@ -3,7 +3,7 @@
 # Description: Build OpenWrt
 #============================================================================================
 
-name: WiFi Router编译固件
+name: 通用设备编译固件
 
 on:
   repository_dispatch:
