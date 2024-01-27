@@ -85,3 +85,5 @@ make menuconfig
  3.  下载固件
  
    编译完成后点击 Code, 再点击页面右下角Release进入下载页面。
+
+原始代码来源：https://github.com/xinlingduyu/build-openwrt
