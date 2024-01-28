@@ -31,6 +31,7 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 
 # Add third-party software packages (The entire repository)
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
 git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
