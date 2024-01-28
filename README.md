@@ -66,7 +66,7 @@ make menuconfig
  5，下载固件
  
    编译完成后点击 Code, 再点击页面右下角Release进入下载页面。
-   默认IP地址：192.168.100.1(root, password)
+   默认IP地址：192.168.1.1(root, password)
 
  ##### 为电视盒子编译OpenWRT固件 ####
  
