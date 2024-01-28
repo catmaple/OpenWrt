@@ -41,6 +41,8 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
+sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
+
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
 kenzok8 的源里集成了很多常用的软件
