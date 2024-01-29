@@ -55,7 +55,7 @@ kenzok8 的源里集成了很多常用的软件
 
 make menuconfig
 
-选择路由器对应的架构，型号和所需的插件，退出保存后会生成.config文件在openwrt目录里。
+选择路由器对应的架构，型号和所需的插件, 如Passwall, SSR+等 ，退出保存后会生成.config文件在openwrt目录里。
 
 ---e.拷贝这个文件内容，替换GitHub对应Code > config > 对应源码 > config文件内容。
  
