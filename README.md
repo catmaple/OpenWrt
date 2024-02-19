@@ -25,7 +25,7 @@ Github在线编译提供了高性能的虚拟服务器环境，基于它可以�
 
 --- a.在本地VirtualBox建立Ubuntu客户机，在Ubuntu中安装编译环境
 
-sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex quilt uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
+sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev libgcc1 libc6-dev-i386 subversion flex quilt uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
 
 --- b.然后克隆源码到Ubuntu客户机，如：
 
