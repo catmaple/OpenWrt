@@ -51,6 +51,9 @@ sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.de
 
 sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
 
+sed -i '$a src-git kiddin9 https://github.com/kiddin9/openWrt-Packages' feeds.conf.default
+
+
 kenzok8 的源里集成了很多常用的软件
 
 ./scripts/feeds update -a
