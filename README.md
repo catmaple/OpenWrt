@@ -41,23 +41,9 @@ git clone https://github.com/coolsnowwolf/lede openwrt
 
 cd openwrt/
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-
-sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
-
-sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' feeds.conf.default
-
-sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-
-sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
-
-sed -i '$a src-git kiddin9 https://github.com/kiddin9/openWrt-Packages' feeds.conf.default
-
-
-kenzok8 的源里集成了很多常用的软件
-
+sed -i '$a src-git ing https://github.com/wjz304/openwrt-packages;openwrt' feeds.conf.default
+./scripts/feeds clean
 ./scripts/feeds update -a
-
 ./scripts/feeds install -a
 
 --- d.生成config内容
