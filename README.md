@@ -41,7 +41,7 @@ git clone https://github.com/coolsnowwolf/lede openwrt
 
 cd openwrt/
 
-sed -i '$a src-git ing https://github.com/wjz304/openwrt-packages;openwrt' feeds.conf.default
+sed -i '$a src-git ing https://github.com/wjz304/openwrt-packages;lede' feeds.conf.default
 
 ./scripts/feeds clean
 
